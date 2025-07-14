@@ -20,6 +20,7 @@
 
 .books-table thead {
   background-color: #f8fafc;
+  align-items: center;
 }
 
 .books-table th {

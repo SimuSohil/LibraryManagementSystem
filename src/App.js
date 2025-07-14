@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 import './App.css';
 import Header from './components/Header';
-import AvailableBooks from './components/AvailableBooks';
-import BorrowedBooks from './components/BorrowedBooks';
+import AvailableBooks from './components/Member/AvailableBooks.js';
+import BorrowedBooks from './components/Member/BorrowedBooks.js';
 import UserRoleSelection from './components/UserRoleSelection';
-import IssueBooks from './components/IssueBooks';
+import IssueBooks from './components/Librarian/IssueBooks.js';
 import MemberHOC from './components/HOC/MemberHOC';
 import LibrarianHOC from './components/HOC/LibrarianHOC.js';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/Librarian/Dashboard.js';
 
 // HOC for members
 const AvailableBooksMembers = MemberHOC(AvailableBooks);

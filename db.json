@@ -4,12 +4,18 @@
       "id": "1",
       "title": "Harry Potter and the Philosopher's Stone",
       "author": "J.K. Rowling",
-      "genre": "Fiction",
-      "available_copies": 1
+      "genre": [
+        "Fiction-all"
+      ],
+      "available_copies": [
+        "2"
+      ]
     },
     {
       "id": "2",
-      "title": "To Kill a Mockingbird",
+      "title": [
+        "To Kill a "
+      ],
       "author": "Harper Lee",
       "genre": "Fiction",
       "available_copies": 0
@@ -33,16 +39,9 @@
       "title": "The Hobbit",
       "author": "J.R.R. Tolkien",
       "genre": "Fantasy",
-      "available_copies": 0
+      "available_copies": 1
     }
   ],
-  "issued_books": [
-    {
-      "id": "5",
-      "title": "The Hobbit",
-      "author": "J.R.R. Tolkien",
-      "genre": "Fantasy"
-    }
-  ],
+  "issued_books": [],
   "borrowed_books": []
 }

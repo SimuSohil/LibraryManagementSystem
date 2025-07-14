@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../styles/UserRoleSelection.css'
+import '../styles/UserRoleSelection.css';
 import { useNavigate } from 'react-router';
 
 function UserRoleSelection() {
@@ -17,7 +17,7 @@ function UserRoleSelection() {
         <div>
             <h1>Choose Your User Role</h1>
 
-            <div>
+            <div className='role-buttons'>
                 <button onClick={handleLibrarianClick}>Librarian</button>
                 <button onClick={handleMemberClick}>Member</button>
             </div>
