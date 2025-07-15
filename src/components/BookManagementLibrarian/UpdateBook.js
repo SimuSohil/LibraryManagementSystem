@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './UpdateBook.js';
 import '../../styles/UpdateBook.css';
 import axios from 'axios';
@@ -45,8 +45,28 @@ const UpdateBook = () => {
     const updateBook = (event) => {
         event.preventDefault();
 
-        if (bookData.available_copies < 0) {
+        if (bookData.available_copies < 0 || bookData.available_copies === '' || bookData.available_copies === null) {
             alert("Please enter the correct value");
+            return;
+        }
+
+        if (!bookData.id) {
+            alert("Please enter a book ID");
+            return;
+        }
+        
+        if (!bookData.title) {
+            alert("Please enter a book title");
+            return;
+        }
+        
+        if (!bookData.author) {
+            alert("Please enter an author name");
+            return;
+        }
+        
+        if (!bookData.genre) {
+            alert("Please enter a genre");
             return;
         }
 
@@ -77,14 +97,13 @@ const UpdateBook = () => {
     return (
         <div className='update-book-container'>
             <div className='find-book-section'>
-                <input type='text' value={bookId} onChange={handleChangeId} placeholder='Enter the book ID' required/>
+                <input type='number' value={bookId} onChange={handleChangeId} placeholder='Enter the book ID' required/>
                 <button onClick={findBook}>Find Book</button>
             </div>
 
             {foundBook && (
                 <div className='edit-book-section'>
                     <h3>Book Found! Edit the details:</h3>
-                    {/* <input name="id" value={bookData.id} onChange={handleChange} placeholder="ID" required readOnly /> */}
                     <input name="title" value={bookData.title} onChange={handleInputChange} placeholder="Title" required />
                     <input name="author" value={bookData.author} onChange={handleInputChange} placeholder="Author" required />
                     <input name="genre" value={bookData.genre} onChange={handleInputChange} placeholder="Genre" required />

@@ -1,24 +1,13 @@
 {
   "books": [
     {
-      "id": "1",
-      "title": "Harry Potter and the Philosopher's Stone",
-      "author": "J.K. Rowling",
-      "genre": [
-        "Fiction-all"
-      ],
-      "available_copies": 2
-    },
-    {
       "id": "2",
       "title": [
         "To Kill a Mockingbird"
       ],
       "author": "Harper Lee",
       "genre": "Fiction",
-      "available_copies": [
-        "3"
-      ]
+      "available_copies": 3
     },
     {
       "id": "3",

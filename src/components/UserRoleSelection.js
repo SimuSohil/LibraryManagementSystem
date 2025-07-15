@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import '../styles/UserRoleSelection.css';
 import { useNavigate } from 'react-router';
 

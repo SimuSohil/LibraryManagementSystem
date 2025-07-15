@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './AddBook.js';
 import '../../styles/AddBook.css';
 import axios from 'axios';
@@ -14,7 +14,7 @@ const AddBook = () => {
 
   const handleChange = (event) => {
     setBookData({ 
-      ...bookData,  // spread
+      ...bookData,  
       [event.target.name]: event.target.value 
     });
   };
@@ -22,8 +22,28 @@ const AddBook = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (bookData.available_copies < 0) {
+    if (bookData.available_copies < 0 || bookData.available_copies === '' || bookData.available_copies === null) {
       alert("Enter the correct value for available copies!");
+      return;
+    }
+
+    if (!bookData.id) {
+      alert("Please enter a book ID");
+      return;
+    }
+    
+    if (!bookData.title) {
+      alert("Please enter a book title");
+      return;
+    }
+    
+    if (!bookData.author) {
+      alert("Please enter an author name");
+      return;
+    }
+    
+    if (!bookData.genre) {
+      alert("Please enter a genre");
       return;
     }
 
@@ -52,7 +72,7 @@ const AddBook = () => {
 
   return (
     <form onSubmit={handleSubmit} id='addBookForm'>
-        <input name="id" value={bookData.id} onChange={handleChange} placeholder="ID" required />
+        <input name="id" type="number" value={bookData.id} onChange={handleChange} placeholder="ID" required />
         <input name="title" value={bookData.title} onChange={handleChange} placeholder="Title" required />
         <input name="author" value={bookData.author} onChange={handleChange} placeholder="Author" required />
         <input name="genre" value={bookData.genre} onChange={handleChange} placeholder="Genre" required />
