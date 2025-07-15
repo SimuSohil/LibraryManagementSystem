@@ -24,6 +24,7 @@ function App() {
           <Header/>
           <BrowserRouter>
               <Routes>
+                <Route path='/' element={<UserRoleSelection/>}/>
                 <Route path='/home' element={<UserRoleSelection/>}/>
 
                 <Route path='/availbooks' element={<AvailableBooksMembers/>}/>
