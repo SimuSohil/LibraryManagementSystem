@@ -8,7 +8,7 @@ const AvailableLibraryBooks = () => {
     useEffect(() => {
         axios.get("http://localhost:3500/books")
             .then(response => {
-                setBooksData(response.data);
+                setBooksData(response.data); 
             })
             .catch(() => {
                 alert("There are no books in the library!");

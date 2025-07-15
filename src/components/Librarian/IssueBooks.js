@@ -12,7 +12,7 @@ const IssueBooks = () => {
             .catch(() => {
                 alert("No books to be issued!");
             });
-    }, []);
+    });
 
     const IssueBook = (bookId) => {
         const issuedBook = issuedBooks.find((bk) => bk.id === bookId);

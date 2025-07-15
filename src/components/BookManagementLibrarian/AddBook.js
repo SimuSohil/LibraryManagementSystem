@@ -14,7 +14,7 @@ const AddBook = () => {
 
   const handleChange = (event) => {
     setBookData({ 
-      ...bookData, 
+      ...bookData,  // spread
       [event.target.name]: event.target.value 
     });
   };

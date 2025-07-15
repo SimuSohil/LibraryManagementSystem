@@ -13,8 +13,9 @@ const AvailableBooks = () => {
             .catch(() => {
                 alert("There are no books in the library!");
             });
-    }, []);
+    });
 
+    // Method for request
     const handleClick = (bookId, bookTitle) => {
         const book = booksData.find((bk) => bookId === bk.id);
 

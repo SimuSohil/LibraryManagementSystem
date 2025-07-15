@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './UpdateBook.js';
 import '../../styles/UpdateBook.css';
 import axios from 'axios';
@@ -45,6 +45,11 @@ const UpdateBook = () => {
     const updateBook = (event) => {
         event.preventDefault();
 
+        if (bookData.available_copies < 0) {
+            alert("Please enter the correct value");
+            return;
+        }
+
         const updatedBook = {
             id: bookData.id,
             title: bookData.title,
@@ -83,7 +88,7 @@ const UpdateBook = () => {
                     <input name="title" value={bookData.title} onChange={handleInputChange} placeholder="Title" required />
                     <input name="author" value={bookData.author} onChange={handleInputChange} placeholder="Author" required />
                     <input name="genre" value={bookData.genre} onChange={handleInputChange} placeholder="Genre" required />
-                    <input name="available_copies" type="number" value={bookData.available_copies} onChange={handleInputChange} placeholder="Copies" required/>
+                    <input name="available_copies" type="number" value={bookData.available_copies} onChange={handleInputChange} placeholder="Copies" min={0} required />
 
                     <button type="submit" onClick={updateBook}>Update Book</button>
                 </div>

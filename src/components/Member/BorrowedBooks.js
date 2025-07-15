@@ -21,7 +21,7 @@ const BorrowedBooks = () => {
             .catch(() => {
                 alert("There are no books in the library!");
             });
-    }, []);
+    }, []); // Dependancy array when empty, is mounted only once or rendered only once. When variables are given, when the value of the variable changes, the useEffect is called again.
 
     const returnBook = (bookId) => {
         const book = books.find((bk) => bookId === bk.id);
@@ -31,7 +31,7 @@ const BorrowedBooks = () => {
 
         axios.delete(`http://localhost:3500/borrowed_books/${bookId}`)
             .then(() => {
-                setBorrowedBooks(borrowedBooks.filter(book => book.id !== bookId));
+                setBorrowedBooks(borrowedBooks.filter(book => book.id !== bookId)); // for my reference: filter() method is used to create a new array of elements that satisfy the condition mentioned.
                 alert('Book returned successfully!');
             });
     };

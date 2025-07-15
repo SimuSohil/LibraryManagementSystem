@@ -7,9 +7,7 @@
       "genre": [
         "Fiction-all"
       ],
-      "available_copies": [
-        "2"
-      ]
+      "available_copies": 2
     },
     {
       "id": "2",
@@ -18,7 +16,9 @@
       ],
       "author": "Harper Lee",
       "genre": "Fiction",
-      "available_copies": 0
+      "available_copies": [
+        "3"
+      ]
     },
     {
       "id": "3",
