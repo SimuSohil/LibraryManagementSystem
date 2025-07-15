@@ -12,7 +12,7 @@
     {
       "id": "2",
       "title": [
-        "To Kill a "
+        "To Kill a Mockingbird"
       ],
       "author": "Harper Lee",
       "genre": "Fiction",
@@ -40,6 +40,13 @@
       "author": "J.R.R. Tolkien",
       "genre": "Fantasy",
       "available_copies": 1
+    },
+    {
+      "id": "6",
+      "title": "TestBook",
+      "author": "TestAuthor",
+      "genre": "Fantasy",
+      "available_copies": "2"
     }
   ],
   "issued_books": [],

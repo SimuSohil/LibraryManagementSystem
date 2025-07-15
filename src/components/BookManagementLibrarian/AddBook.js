@@ -22,6 +22,11 @@ const AddBook = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    if (bookData.available_copies < 0) {
+      alert("Enter the correct value for available copies!");
+      return;
+    }
+
     const newBook = {
       id: bookData.id,
       title: bookData.title,
